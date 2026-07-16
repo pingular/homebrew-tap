@@ -10,7 +10,7 @@ class Pingularity < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/pingular/pingularity/releases/download/v0.1.0-rc1/pingularity_0.1.0-rc1_darwin_amd64.tar.gz"
-      sha256 "9de7f417715a56e6bbe9e8c16351967db6f15054669c98c165a707bcf807c107"
+      sha256 "ed3ee0834565ff7ac2d38bd947bbed4067eb921cf0ba52e61e7ccb6f5f5fe611"
 
       define_method(:install) do
         bin.install "pingularity"
@@ -18,7 +18,7 @@ class Pingularity < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/pingular/pingularity/releases/download/v0.1.0-rc1/pingularity_0.1.0-rc1_darwin_arm64.tar.gz"
-      sha256 "a1629966cc9984407cdd7ae2e3a5aa5191d6dd41f683d42174aa678a803e9152"
+      sha256 "a7db59d528eee5a25bb39a99798796fdd3aeaed7dac23863b88da5b38be072cd"
 
       define_method(:install) do
         bin.install "pingularity"
@@ -29,14 +29,14 @@ class Pingularity < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/pingular/pingularity/releases/download/v0.1.0-rc1/pingularity_0.1.0-rc1_linux_amd64.tar.gz"
-      sha256 "8882702db7e17767b54ae9577b4f983139117024d071898280f546241360aa03"
+      sha256 "71ee39afcb5eb1b2f9844456c09e7137f17138f678f61b109928a7a3c525aa7f"
       define_method(:install) do
         bin.install "pingularity"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/pingular/pingularity/releases/download/v0.1.0-rc1/pingularity_0.1.0-rc1_linux_arm64.tar.gz"
-      sha256 "2838c88d3e951f9d1797e6dbc05547e12293c66ef1503d3d2e20a523477081e1"
+      sha256 "48a434618fc52c2a5dc4885c78cd3435d39815e1113f367b70060b98f496e174"
       define_method(:install) do
         bin.install "pingularity"
       end
