@@ -2,6 +2,12 @@
 cask "pingularity" do
   depends_on macos: :ventura
 
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/pingularity"], must_succeed: false
+    end
+  end
+
   version "0.100.1"
 
   on_macos do
@@ -36,16 +42,12 @@ cask "pingularity" do
 
   binary "pingularity"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/pingularity"]
-    end
-  end
-
   # No zap stanza required
 
   caveats <<~EOS
     To run pingularity as a background service via launchd, run:
       sudo pingularity install
+    If that service is already installed, switch it to this version with:
+      sudo pingularity restart
   EOS
 end
