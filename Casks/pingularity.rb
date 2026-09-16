@@ -8,26 +8,26 @@ cask "pingularity" do
     end
   end
 
-  version "0.100.3"
+  version "0.100.4"
 
   on_macos do
     on_intel do
-      sha256 "ecafff69feb3bba9a3d4d85de13ea0f5f10802e791c25756a85761333ede2cee"
+      sha256 "854298d6b8fea128259ebdd511c848d0eef64be97c6235d37b0b471d2d21b867"
       url "https://github.com/pingular/pingularity/releases/download/v#{version}/pingularity_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "b7e303cf57d5fbe401270beba31062512865bd1874e754b1cdb7574525a0f448"
+      sha256 "3a506b0ffa3db177e838c3371411b0427fcc5845f77a2369a2f12c96655fa527"
       url "https://github.com/pingular/pingularity/releases/download/v#{version}/pingularity_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "4101c1c1ba95bfb375c1ed025a08e4171d36edf314ebc0263352b3e29bd667a3"
+      sha256 "3a04044dbeef86346f14035fe1e537291ce6dccfe0c55dcbc086613eae323349"
       url "https://github.com/pingular/pingularity/releases/download/v#{version}/pingularity_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "16216ddbca8d34b9448960559f246055fc4db25e03841494e961682108c918b7"
+      sha256 "1bb74fe5a644061f1d481b26679b740eb355baa35ae43d97116b4e976398991e"
       url "https://github.com/pingular/pingularity/releases/download/v#{version}/pingularity_#{version}_linux_arm64.tar.gz"
     end
   end
